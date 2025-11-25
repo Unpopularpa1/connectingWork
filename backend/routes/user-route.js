@@ -1,0 +1,11 @@
+const express=require("express");
+const {register,login,getUserProfile,getUserProfileById,updateUserProfile}=require("../controllers/user-controller");
+const authMiddleware=require("../middleware/auth-middleware");
+const imageUpload=require("../middleware/image-middleware");
+const router=express.Router();
+router.post("/register",imageUpload.single("profilePicture"),register);
+router.post("/login",login);
+router.get("/profile",authMiddleware,getUserProfile);
+router.get("/profile:id",authMiddleware,getUserProfileById);
+router.put("/update:id",authMiddleware,imageUpload.single("profilePicture"),updateUserProfile);
+module.exports=router;
