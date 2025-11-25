@@ -1,5 +1,5 @@
 const User = require("../models/UserSchema");
-const Job = require("../models/JobSchema");
+const Job = require("../models/jobSchema");
 const mongoose =require('mongoose');
 // Create a new job
 

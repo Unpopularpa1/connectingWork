@@ -1,5 +1,5 @@
 const User = require("../models/UserSchema");
-const Job = require("../models/JobSchema");
+const Job = require("../models/jobSchema");
 
 // Dashboard Controller with flat chart data
 const getDashboard = async (req, res) => {
